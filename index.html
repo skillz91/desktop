@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>IT-Enterprise Desktop</title>
+<style type="text/css" media="screen">
+@import "css/jquery.mobile-1.4.0-beta.1.min.css";
+</style>
+<style type="text/css" media="screen">
+	@import "css/style.css";
+</style>
+<style type="text/css" media="screen">
+	@import "css/index.css";
+</style>
+
+</head>
+	<body onload="onload();">
+	<div data-role="page" id="main" data-theme="a">
+		<div data-role="header">
+			<h1>IT-Enterprise</h1>
+			<a href="#location" class="ui-btn-icon-notext ui-btn-right ui-alt-icon ui-nodisc-icon custom-button" 
+				data-iconpos="notext" data-corners="false" data-shadow="false" data-icon="gear">Настройки</a>
+		</div>
+		<div data-role="content">
+			<a type="button" class="ui-btn" id="server-url">Войти в систему</a>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="a">IT</div>
+	</div>
+	<div data-role="page" id="location" data-theme="a">
+		<div data-role="header">
+			<a href="#main" data-rel="back" class="ui-btn-icon-notext ui-nodisc-icon ui-btn-left ui-btn ui-icon-left-button-arrow custom-button back-button" 
+				data-iconpos="notext" data-corners="false" data-shadow="false">Назад</a>
+			<h1>Настройки</h1>
+			<a href="#main" class="ui-btn-right ui-alt-icon ui-nodisc-icon custom-button" onclick="saveSettings();" 
+				data-iconpos="notext" data-corners="false" data-shadow="false" data-icon="check" >Сохранить</a>
+		</div>
+		<div data-role="content">
+			<div data-role="fieldcontain">
+				<label for="server">Сервер:</label>
+				<input type="text" name="server" id="server" value="" data-corners="false" data-shadow="false" />
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="a">IT</div>
+	</div>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script src="js/jquery.mobile-1.4.0-beta.1.min.js"></script>
+	<script>
+	function onload(){
+		checkUrl();
+	}
+	
+	function saveSettings(){
+		localStorage.setItem("server-location", $("#server").val());
+		$.mobile.changePage($("#main"));
+	}
+	
+	function checkUrl(){
+		var url = localStorage.getItem("server-location");
+		if (url != null) {
+			window.location = url;
+		}
+		else {
+			url = "http://m.it.ua/desktop/";
+			$("#server").val(url);
+			$("#server-url").attr("href", url);
+			$.mobile.changePage($("#main"));
+		}
+	}
+	
+	$(document).on('pageshow', '[data-role=page]', function (event, ui) {
+			$(".ui-shadow-inset", event.delegateTarget).removeClass('ui-shadow-inset');
+			$(".ui-corner-all", event.delegateTarget).removeClass('ui-corner-all');
+		});
+	
+
+	</script>
+	</body>
+</html>
