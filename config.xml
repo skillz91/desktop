@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<widget id="com.it.desktop" version="1.0.3" xmlns="http://www.w3.org/ns/widgets" 
-xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.it.desktop" version="1.0.3" xmlns="http://www.w3.org/ns/widgets"
+ xmlns:gap="http://phonegap.com/ns/1.0">
     <name>IT-Enterprise Desktop</name>
     <description>
         IT-Enterprise - mobile client for Desktop system.
@@ -16,7 +16,7 @@ xmlns:gap="http://phonegap.com/ns/1.0">
     <feature name="http://api.phonegap.com/1.0/file"/>
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	<feature name="http://api.phonegap.com/1.0/camera"/>
-    <preference name="phonegap-version"           value="3.0.0" />          <!-- all: current version of PhoneGap -->
+    <preference name="phonegap-version"           value="2.9.0" />          <!-- all: current version of PhoneGap -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
