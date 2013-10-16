@@ -57,13 +57,13 @@
 	
 	function saveURL() {
 		localStorage.setItem("server-location", $("#server").val());
-		$("#server-url").attr("href", $("#server").val() + "?phonegap=1");
+		$("#server-url").attr("href", $("#server").val() + "?phonegap=2");
 	}
 	
 	function checkUrl(){
 		var url = localStorage.getItem("server-location");
 		if (url != null) {
-			window.location = url + "?phonegap=1";
+			location.href = url + "?phonegap=2";
 		}
 		else {
 			url = "http://m.it.ua/desktop";
