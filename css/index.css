@@ -89,11 +89,19 @@ body {
 .ui-btn.ui-icon-arrow-right,
 .ui-btn.ui-icon-left-button-arrow,
 .ui-btn.ui-icon-arrow-left-grey,
-.ui-btn.ui-icon-arrow-right-grey {
+.ui-btn.ui-icon-arrow-right-grey,
+.ui-btn.ui-icon-checkmark {
  background-repeat: no-repeat !important;
  background-size: 18px 18px !important;
  background-position: center center !important;
 }
+
+.ui-btn.ui-icon-gear-blue {
+ background-repeat: no-repeat !important;
+ background-size: 14px 14px !important;
+ background-position: center center !important;
+}
+
 .ui-btn.ui-icon-arrow-down {
  background-image: url("../img/arrow_down.png") !important;
 }
@@ -107,13 +115,19 @@ body {
  background-image: url("../img/arrow_right.png") !important;
 }
 .ui-btn.ui-icon-left-button-arrow {
- background-image: url("../img/button_arrow_left.png") !important;
+ background-image: url("../img/icon-back.png") !important;
 }
 .ui-btn.ui-icon-arrow-left-grey {
  background-image: url("../img/grey_arrow_left.png") !important;
 }
 .ui-btn.ui-icon-arrow-right-grey {
  background-image: url("../img/grey_arrow_right.png") !important;
+}
+.ui-btn.ui-icon-checkmark {
+ background-image: url("../img/checkmark.png") !important;
+}
+.ui-btn.ui-icon-gear-blue {
+ background-image: url("../img/gear-blue.png") !important;
 }
 
 .ui-icon-arrow-left-grey,
